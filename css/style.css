@@ -1,0 +1,544 @@
+@font-face {
+  font-family: 'Publico Text';
+  src: url('../fonts/PublicoText-Roman.otf') format("otf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+body {
+  background-color: #ffffff;
+  font-family: 'Publico Text';
+  font-size: 18px;
+  font-style: normal;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/*======= Header ======= */
+.header {
+  width: 100%;
+  height: 112px;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu__list {
+  display: flex;
+}
+
+.menu__list>li {
+  margin-left: 30px;
+}
+
+.menu__list>li:first-child {
+  margin-left: 0;
+}
+
+.arrow {
+  margin-left: 5px;
+}
+
+.menu__link {
+  display: inline-block;
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.menu__link::after {
+  content: '';
+  display: block;
+  position: relative;
+  top: 8px;
+  width: 0;
+  height: 1px;
+  background: #00AEEF;
+  transition: width .3s;
+}
+
+.menu__link:hover::after {
+  width: 100%;
+  transition: width .3s;
+}
+
+body.mouse .menu__list>li:hover .sub-menu__list {
+  display: block;
+}
+
+body.touch .sub-menu__list.open {
+  display: block;
+}
+
+.sub-menu__list {
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  min-width: 250px;
+  padding: 50px 0 0 0;
+  z-index: 5;
+}
+
+.sub-menu__list>li {
+  background-color: #ffffff;
+  border-bottom: 1px solid #EBEBEB;
+}
+
+.sub-menu__link {
+  display: inline-block;
+  line-height: 22px;
+  padding: 12px 24px;
+}
+
+/*======= Burger ======= */
+
+.burger {
+  width: 33px;
+  height: 22px;
+  cursor: pointer;
+  position: relative;
+  display: none;
+}
+
+.burger__line {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #000;
+  position: absolute;
+  left: 0;
+  transition: .3s all linear;
+}
+
+.burger__line-first {
+  top: 0;
+}
+
+.burger__line-second,
+.burger__line-third {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.burger__line-fourth {
+  bottom: 0;
+}
+
+.active .burger__line-first,
+.active .burger__line-fourth {
+  opacity: 0;
+}
+
+.active .burger__line-second {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.active .burger__line-third {
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+/*======= Contact Us ======= */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 59px 0 80px 0;
+}
+
+.contact__info {
+  flex: 1;
+  min-width: 330px;
+  border-top: 1px solid #00AEEF;
+}
+
+.contact__info h2 {
+  margin: 32px 0 24px 0;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 160%;
+}
+
+.contact__info h4 {
+  margin-bottom: 4px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 140%;
+}
+
+.contact__info a {
+  font-size: 24px;
+  line-height: 140%;
+}
+
+.contact__info a:hover {
+  transition: 0.2s ease-in;
+  color: #00AEEF;
+}
+
+.contact__info .block {
+  margin-bottom: 32px;
+}
+
+.contact__map {
+  margin-left: 20px;
+  position: relative;
+  width: 635px;
+  height: 558px;
+  overflow: hidden;
+}
+
+.contact__map iframe {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+
+/*======= Form ======= */
+.form {
+  background-color: #F6F7F9;
+  padding-top: 64px;
+  padding-bottom: 100px;
+}
+
+.form__inner {
+  max-width: 730px;
+  margin: 0 auto;
+}
+
+.form__title {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 160%;
+  text-align: center;
+  margin-bottom: 37px;
+}
+
+.form__group-input {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__label {
+  color: #2B292D;
+  margin-bottom: 15px;
+}
+
+.form__input {
+  height: 64px;
+  min-width: 350px;
+}
+
+.form__textarea {
+  height: 128px;
+  width: 100%;
+  padding-top: 16px;
+  resize: vertical;
+  margin-bottom: 60px;
+}
+
+.form__input,
+.form__textarea {
+  font-family: 'Publico Text';
+  font-weight: 500;
+  font-size: 20px;
+  padding: 0 16px;
+  border: 1px solid #979797;
+  transition: border 0.3s ease-in;
+}
+
+.form__textarea:focus,
+.form__input:focus {
+  border: 1px solid #00AEEF;
+}
+
+.btn {
+  color: #ffffff;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  padding: 20px 139px;
+  background-color: #00AEEF;
+
+}
+
+.btn:hover {
+  background-color: #2ec0f5;
+  transition: 0.2s ease-in;
+}
+
+.btn-center {
+  text-align: center;
+}
+
+/*======= Meet our colleagues ======= */
+.colleagues {
+  padding: 80px 0;
+}
+
+.colleagues h2 {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 160%;
+  text-align: center;
+}
+
+.colleagues__block {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.colleagues__col {
+  flex-basis: 33.33333%;
+  padding: 20px 15px;
+}
+
+.colleagues__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.colleagues__content {
+  padding: 10px;
+  text-align: center;
+}
+
+.colleagues__title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 140%;
+  margin: 20px 0 8px 0;
+}
+
+.colleagues__prof {
+  margin-bottom: 16px;
+}
+
+.colleagues__prof,
+.colleagues__email {
+  line-height: 140%;
+}
+
+.colleagues__email a:hover {
+  color: #00AEEF;
+}
+
+
+/*======= Footer ======= */
+
+.footer {
+  position: relative;
+  width: 100%;
+  background-image: url(../img/footer-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 128px 0;
+  color: #ffffff;
+}
+
+.footer__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #002B5C;
+  opacity: 0.9;
+  z-index: 1;
+}
+
+.footer__info,
+.footer__links {
+  position: relative;
+  z-index: 2;
+}
+
+.footer__info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 46px;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.link__loc,
+.link__email,
+.link__phone,
+.link__fax,
+.link__social {
+  padding: 15px;
+}
+
+.footer__links h4 {
+  font-weight: 600;
+  line-height: 140%;
+  margin-bottom: 5px;
+}
+
+.footer__links a:hover {
+  transition: 0.2s ease-in;
+  color: #00AEEF;
+}
+
+.info__logo {
+  padding-bottom: 30px;
+  padding-right: 30px;
+}
+
+.info__description {
+  max-width: 760px;
+  font-size: 12px;
+  line-height: 160%;
+}
+
+
+
+/*======= Media for tablet ======= */
+
+
+@media screen and (max-width: 768px) {
+
+  /*======= Header ======= */
+  body.lock {
+    overflow: hidden;
+  }
+
+  .header {
+    height: 60px;
+    padding-left: 15px;
+  }
+
+  .header__logo {
+    width: 140px;
+  }
+
+  .menu {
+    position: fixed;
+    top: 60px;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    overflow: auto;
+    transition: all 0.3s;
+    z-index: 100;
+  }
+
+  .menu.active {
+    left: 0;
+  }
+
+  .menu__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu__list li {
+    padding: 16px 0;
+    margin: 0 15px;
+    border-bottom: 1px solid #EBEBEB;
+  }
+
+  .menu__list>li:first-child {
+    margin-left: 15px;
+  }
+
+  .menu__link::after {
+    display: none;
+  }
+
+  .menu__link:hover {
+    transform: scale(1.1);
+  }
+
+  .sub-menu__list {
+    position: relative;
+    top: 0;
+    left: 0;
+    padding-top: 0;
+  }
+
+  .sub-menu__list>li {
+    border: none;
+  }
+
+  .sub-menu__link {
+    padding: 0;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  /*======= Contact US ======= */
+
+  .contact__info {
+    text-align: center;
+  }
+
+  .contact__map {
+    width: 100%;
+    margin-left: 0;
+  }
+
+
+  /*======= Meet our colleagues ======= */
+  .colleagues {
+    padding: 30px 0;
+  }
+
+  /*======= Footer ======= */
+
+  .footer {
+    padding: 50px 0;
+  }
+}
+
+/*======= Media for phone ======= */
+
+@media screen and (max-width: 576px) {
+
+  /*======= Form ======= */
+  .form__input {
+    min-width: 345px;
+  }
+
+  /*======= Colleagues ======= */
+  .colleagues__col {
+    flex-basis: 100%;
+  }
+}

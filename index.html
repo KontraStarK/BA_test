@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ByteAnt_test</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header__logo">
+      <a href="#">
+        <img src="img/logo-header.png" alt="Logo East capital real estate">
+      </a>
+    </div>
+    <nav class="menu">
+      <ul class="menu__list">
+        <li>
+          <a class="menu__link" href="#">About</a>
+        </li>
+        <li>
+          <a class="menu__link" href="#">Funds</a>
+          <img class="arrow" src="img/arrow.svg" alt="Sub menu arrow">
+          <ul class="sub-menu__list">
+            <li>
+              <a class="sub-menu__link" href="#">Baltic Property Fund</a>
+            </li>
+            <li>
+              <a class="sub-menu__link" href="#">Baltic Property Fund II</a>
+            </li>
+            <li>
+              <a class="sub-menu__link" href="#">Baltic Property Fund III</a>
+            </li>
+            <li>
+              <a class="sub-menu__link" href="#">Baltic Property Fund IV</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a class="menu__link" href="#">Portfolio</a>
+        </li>
+        <li>
+          <a class="menu__link" href="#">News</a>
+        </li>
+        <li>
+          <a class="menu__link" href="#">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="burger">
+      <span class="burger__line burger__line-first"></span>
+      <span class="burger__line burger__line-second"></span>
+      <span class="burger__line burger__line-third"></span>
+      <span class="burger__line burger__line-fourth"></span>
+    </div>
+  </header>
+  <main>
+    <!-- Сontact us -->
+    <section class="contact us">
+      <div class="wrapper">
+        <div class="container">
+          <div class="contact__info">
+            <h2>Contact us</h2>
+            <div class="contact__loc block">
+              <h4>East Capital Real Estate AS</h4>
+              <a href="#">Tartu mnt. 2 Talinn 10145, Estonia</a>
+            </div>
+            <div class="contact__email block">
+              <h4>Email</h4>
+              <a href="mailto:talinn@eastcapital.com">talinn@eastcapital.com</a>
+            </div>
+            <div class="contact__phone block">
+              <h4>Phone</h4>
+              <a href="tel:+3726406650">+372 6406 650</a>
+            </div>
+            <div class="contact__fax block">
+              <h4>Fax</h4>
+              <a href="fax:+3726406660">+372 6406 660</a>
+            </div>
+            <div class="contact__social block">
+              <h4>Social media</h4>
+              <a href="#">Linkedin</a>
+            </div>
+          </div>
+          <div class="contact__map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2574.252390136811!2d24.05576191547614!3d49.818921379393245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473ae78947c44c69%3A0x1cc45054a83fee31!2sByteAnt!5e0!3m2!1sru!2sua!4v1596299771136!5m2!1sru!2sua"
+              width="633" height="558" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Сontact Form -->
+    <section class="form">
+      <div class="wrapper">
+        <h2 class="form__title">Send us a message</h2>
+        <form class="form__inner" action="POST">
+          <div class="form__group-input">
+            <div class="group">
+              <label for="name" class="form__label">Name</label>
+              <input id="name" class="form__input" type="text">
+            </div>
+            <div class="group">
+              <label for="email" class="form__label">Email</label>
+              <input id="email" class="form__input" type="email">
+            </div>
+          </div>
+          <div class="form__group-textarea">
+            <div class="group">
+              <label for="message" class="form__label">Message</label>
+              <textarea id="message" class="form__textarea" cols="30" rows="10"></textarea>
+            </div>
+          </div>
+          <div class="btn-center">
+            <button class="btn" type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- Colleagues -->
+    <section class="colleagues">
+      <div class="wrapper">
+        <h2>Meet our colleagues</h2>
+        <div class="colleagues__block">
+          <div class="colleagues__col">
+            <div class="colleagues__item">
+              <img class="colleagues__image" src="img/photo-1.png" alt="Colleagues photo">
+              <div class="colleagues__content">
+                <div class="colleagues__title">
+                  Jeroen Breuer
+                </div>
+                <div class="colleagues__prof">
+                  Portfolio Manager
+                </div>
+                <div class="colleagues__email">
+                  <a href="meilto:pm@eastcapital.com">pm@eastcapital.com</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="colleagues__col">
+            <div class="colleagues__item">
+              <img class="colleagues__image" src="img/photo-2.png" alt="Colleagues photo">
+              <div class="colleagues__content">
+                <div class="colleagues__title">
+                  Lee Kelleher
+                </div>
+                <div class="colleagues__prof">
+                  Portfolio Manager
+                </div>
+                <div class="colleagues__email">
+                  <a href="meilto:pm@eastcapital.com">pm@eastcapital.com</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="colleagues__col">
+            <div class="colleagues__item">
+              <img class="colleagues__image" src="img/photo-3.png" alt="Colleagues photo">
+              <div class="colleagues__content">
+                <div class="colleagues__title">
+                  Mat Brailsford
+                </div>
+                <div class="colleagues__prof">
+                  Portfolio Manager
+                </div>
+                <div class="colleagues__email">
+                  <a href="meilto:pm@eastcapital.com">pm@eastcapital.com</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="colleagues__col">
+            <div class="colleagues__item">
+              <img class="colleagues__image" src="img/photo-4.png" alt="Colleagues photo">
+              <div class="colleagues__content">
+                <div class="colleagues__title">
+                  Jeroen Breuer
+                </div>
+                <div class="colleagues__prof">
+                  Portfolio Manager
+                </div>
+                <div class="colleagues__email">
+                  <a href="meilto:pm@eastcapital.com">pm@eastcapital.com</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="colleagues__col">
+            <div class="colleagues__item">
+              <img class="colleagues__image" src="img/photo-5.png" alt="Colleagues photo">
+              <div class="colleagues__content">
+                <div class="colleagues__title">
+                  Lee Kelleher
+                </div>
+                <div class="colleagues__prof">
+                  Portfolio Manager
+                </div>
+                <div class="colleagues__email">
+                  <a href="meilto:pm@eastcapital.com">pm@eastcapital.com</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="colleagues__col">
+            <div class="colleagues__item">
+              <img class="colleagues__image" src="img/photo-6.png" alt="Colleagues photo">
+              <div class="colleagues__content">
+                <div class="colleagues__title">
+                  Mat Brailsford
+                </div>
+                <div class="colleagues__prof">
+                  Portfolio Manager
+                </div>
+                <div class="colleagues__email">
+                  <a href="meilto:pm@eastcapital.com">pm@eastcapital.com</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Footer-->
+  <footer class="footer">
+    <div class="footer__overlay"></div>
+    <div class="wrapper">
+      <div class="footer__links ">
+        <div class="link__loc">
+          <h4>East Capital Real Estate AS</h4>
+          <a href="#">Tartu mnt. 2 Talinn 10145, Estonia</a>
+        </div>
+        <div class="link__email">
+          <h4>Email</h4>
+          <a href="mailto:talinn@eastcapital.com">talinn@eastcapital.com</a>
+        </div>
+        <div class="link__phone">
+          <h4>Phone</h4>
+          <a href="tel:+3726406650">+372 6406 650</a>
+        </div>
+        <div class="link__fax ">
+          <h4>Fax</h4>
+          <a href="fax:+3726406660">+372 6406 660</a>
+        </div>
+        <div class="link__social">
+          <h4>Social media</h4>
+          <a href="#">Linkedin</a>
+        </div>
+      </div>
+      <div class="footer__info">
+        <a class="info__logo" href="#">
+          <img src="img/logo-footer.png" alt="Logo East capital real estate">
+        </a>
+        <div class="info__description">East Capital’s Real Estate Funds (Special Fund Products) are directed at
+          institutions and other
+          professional investors. The Special Fund Products are not UCITS- regulated funds and as a result are not
+          adapted for retail investors in the same way as East Capital’s Public Equity Funds. Some of the Special Fund
+          Products may currently be closed for subscription. </div>
+      </div>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
