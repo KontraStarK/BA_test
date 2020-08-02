@@ -240,6 +240,7 @@ body.touch .sub-menu__list.open {
 .group {
   display: flex;
   flex-direction: column;
+  min-width: 350px;
 }
 
 .form__label {
@@ -249,7 +250,7 @@ body.touch .sub-menu__list.open {
 
 .form__input {
   height: 64px;
-  min-width: 350px;
+  width: 100%;
 }
 
 .form__textarea {
@@ -265,9 +266,13 @@ body.touch .sub-menu__list.open {
   font-family: 'Publico Text';
   font-weight: 500;
   font-size: 20px;
-  padding: 0 16px;
+  padding: 0 15px;
   border: 1px solid #979797;
   transition: border 0.3s ease-in;
+}
+
+.form__textarea {
+  padding-top: 15px;
 }
 
 .form__textarea:focus,
@@ -432,7 +437,7 @@ body.touch .sub-menu__list.open {
 
 @media screen and (max-width: 768px) {
 
-  /*======= Header ======= */
+  /*=== Header === */
   body.lock {
     overflow: hidden;
   }
@@ -504,7 +509,7 @@ body.touch .sub-menu__list.open {
     display: block;
   }
 
-  /*======= Contact US ======= */
+  /*===Contact US === */
 
   .contact__info {
     text-align: center;
@@ -515,13 +520,18 @@ body.touch .sub-menu__list.open {
     margin-left: 0;
   }
 
+  /*=== Form ===*/
+  .form__group-input .form__label {
+    margin-top: 20px;
+  }
 
-  /*======= Meet our colleagues ======= */
+
+  /*=== Meet our colleagues ===*/
   .colleagues {
     padding: 30px 0;
   }
 
-  /*======= Footer ======= */
+  /*===Footer === */
 
   .footer {
     padding: 50px 0;
@@ -532,12 +542,12 @@ body.touch .sub-menu__list.open {
 
 @media screen and (max-width: 576px) {
 
-  /*======= Form ======= */
-  .form__input {
-    min-width: 345px;
+  .btn {
+    padding-left: 130px;
+    padding-right: 130px;
   }
 
-  /*======= Colleagues ======= */
+  /*===Colleagues === */
   .colleagues__col {
     flex-basis: 100%;
   }
