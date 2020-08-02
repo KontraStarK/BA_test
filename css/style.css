@@ -161,7 +161,7 @@ body.touch .sub-menu__list.open {
 
 .contact__info {
   flex: 1;
-  min-width: 330px;
+  width: 100%;
   border-top: 1px solid #00AEEF;
 }
 
@@ -237,9 +237,16 @@ body.touch .sub-menu__list.open {
   margin-bottom: 40px;
 }
 
-.group {
+.group-input,
+.group-textarea {
   display: flex;
   flex-direction: column;
+
+}
+
+.group-input {
+  padding-top: 35px;
+  width: 350px;
 }
 
 .form__label {
@@ -249,8 +256,6 @@ body.touch .sub-menu__list.open {
 
 .form__input {
   height: 64px;
-  min-width: 250px;
-  width: 345px;
 }
 
 .form__textarea {
@@ -430,10 +435,17 @@ body.touch .sub-menu__list.open {
   line-height: 160%;
 }
 
-
-
 /*======= Media for tablet ======= */
+@media screen and (max-width: 960px) {
+  .contact__info {
+    text-align: center;
+  }
 
+  .contact__map {
+    width: 100%;
+    margin-left: 0;
+  }
+}
 
 @media screen and (max-width: 768px) {
 
@@ -511,30 +523,27 @@ body.touch .sub-menu__list.open {
 
   /*===Contact US === */
 
-  .contact__info {
-    text-align: center;
-  }
-
-  .contact__map {
+  .group-input {
     width: 100%;
-    margin-left: 0;
   }
-
-  /*=== Form ===*/
-  .form__group-input .form__label {
-    margin-top: 20px;
-  }
-
 
   /*=== Meet our colleagues ===*/
   .colleagues {
     padding: 30px 0;
   }
 
+  .colleagues__col {
+    flex-basis: 50%;
+  }
+
   /*===Footer === */
 
   .footer {
     padding: 50px 0;
+  }
+
+  .footer__links {
+    justify-content: start;
   }
 }
 
@@ -543,11 +552,11 @@ body.touch .sub-menu__list.open {
 @media screen and (max-width: 576px) {
 
   .btn {
-    padding-left: 130px;
-    padding-right: 130px;
+    padding-left: 100px;
+    padding-right: 100px;
   }
 
-  /*===Colleagues === */
+  /*=== Meet our colleagues === */
   .colleagues__col {
     flex-basis: 100%;
   }
