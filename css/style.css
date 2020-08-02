@@ -240,7 +240,6 @@ body.touch .sub-menu__list.open {
 .group {
   display: flex;
   flex-direction: column;
-  min-width: 350px;
 }
 
 .form__label {
@@ -250,7 +249,8 @@ body.touch .sub-menu__list.open {
 
 .form__input {
   height: 64px;
-  width: 100%;
+  min-width: 250px;
+  width: 345px;
 }
 
 .form__textarea {
